@@ -1,0 +1,56 @@
+# Key Technologies
+- Core database
+    - Relational (Postgres)
+        - SQL joins
+        - Indexes
+        - RDBMS transactions (grouping multiple operations together)
+    - NoSQL databases (DynamoDB, Cassandra)
+        - Key-value, document, column-family, graph
+        - Flexible datamodels, scalability, handling big data, real-time web apps
+        - Consistency models (strong -> eventual consistency)
+        - Indexing (B-tree, Hash)
+        - Horizontal scaling
+    - Blob storage (S3, Google cloud)
+        - Large, unstructured blobs of data
+        - Upload blob, returns a URL which can be used to download the blob.
+- Search-optimized database (elasticsearch)
+    - Search through a large amount of text and find relevant results
+    - Inverted indexes: maps from words -> documents containing them
+    - Tokeninzation: break text into words
+    - Stemming: reduce words into root form
+    - Fuzzy search
+    - Horizontal scaling
+
+- API gateway (AWS API gateway)
+    - Route incoming services to backend
+
+- Load balancer (AWS Elastic Load Balancer)
+    - Distribute traffic across multiple machines
+    - L4/L7 load balancer
+        - persistent connections (websockets), L4
+        - L7: great flexibility to routing trafic while milizing connection load
+
+- Message queue (Kafka)
+    - Examples:
+        - Buffer for bursty traffic
+        - Distribute work across a system
+    - Message ordering: FIFO
+        - Kafka allows for more complex ordering
+    - Retry mechanism
+        - Retires, delay between attempts (exponential backoff), max attempts
+    - Dead letter queue: store messages that cannot be processed
+    - Scaling with partitions
+    - Backpressure
+
+- Streams (Kafka)
+    - Examples
+        - Process vast amount of data in real-time 
+        - Complex processing scenarios (event sourcing)
+        - Support multiple consumers reading the same stream
+    - Scaling with partitioning
+    - Multiple consumer groups
+    - Replication
+    - Windowing
+- Distributed locks 
+- Distributed cache
+- Content delivery network (CDN)
