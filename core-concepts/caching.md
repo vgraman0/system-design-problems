@@ -1,6 +1,6 @@
 # Caching
 
-Retrieving from a cache takes 100 nanos while an SSD read takes 1ms (10000x slower).
+Retrieving from a cache takes 100 nanos while an SSD read takes 1ms (10000x)
 
 ## Where to cache
 
